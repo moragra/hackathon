@@ -1,0 +1,48 @@
+@use './partials/breakpoints' as *;
+@use './partials/colors' as *;
+@use './partials/fonts' as *;
+@use './partials/mixins' as *;
+
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    // font-family: ;
+    // font-weight: ;
+}
+
+@include phone{
+    // .header{
+
+    // }
+    // .main{
+
+    // }
+    // .footer{
+
+    // }
+}
+
+@include tablet{
+    // .header{
+
+    // }
+    // .main{
+
+    // }
+    // .footer{
+        
+    // }
+}
+
+@include desktop{
+    // .header{
+
+    // }
+    // .main{
+
+    // }
+    // .footer{
+        
+    // }
+}
