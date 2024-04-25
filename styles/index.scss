@@ -1,48 +1,210 @@
-@use './partials/breakpoints' as *;
-@use './partials/colors' as *;
-@use './partials/fonts' as *;
-@use './partials/mixins' as *;
+@use "./partials/breakpoints" as *;
+@use "./partials/colors" as *;
+@use "./partials/fonts" as *;
+@use "./partials/mixins" as *;
+@use "./partials/variables" as *;
 
-body{
-    box-sizing: border-box;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  // font-weight: ;
+}
+
+@include phone {
+  .header {
+    &__form {
+      width: 100%;
+      height: 100vh;
+      background-color: $primary-dark;
+
+      &-div {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &__input,
+    &__button {
+      border: 1px solid $primary-light;
+      background-color: $primary-light;
+      border-radius: 8px;
+      padding: 0.5rem;
+      margin: 0.5rem;
+    }
+
+    &__form-new {
+      width: 100%;
+      height: auto;
+      background-color: $primary-dark;
+      padding: 0.5rem;
+    }
+  }
+
+  .main {
+    // display: flex;
+    // justify-content: center;
+    @include white-gradient;
+
+    &__info-pp{
+        padding: 5%;
+        margin: 2rem;        
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-250px * 7));
+      }
+    }
+
+    &__slider {
+      box-sizing: border-box;
+      background: white;
+      box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+      height: auto;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+
+      &::before,
+      &::after {
+        @include white-gradient;
+        content: "";
+        height: auto;
+        position: absolute;
+        // width: 200px;
+        // width: 1rem;
+        z-index: 2;
+      }
+
+      &::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+      }
+
+      &::before {
+        left: 0;
+        top: 0;
+      }
+    }
+
+    &__slide-track {
+      animation: scroll $animationSpeed linear infinite;
+      display: flex;
+      width: calc(250px * 10);
+      // height: 100%;
+    }
+
+    &__slide {
+      // width: auto;
+      height: auto;
+      // display: flex;
+      // flex-wrap: wrap;
+    }
+    &__img {
+      height: auto;
+      margin: auto 1rem;
+      width: 10rem;
+      // flex: 1 1 auto;
+    }
+
+    &__hero {
+        // display:flex
+
+      box-sizing: border-box;
+    }
+    .hero {
+        position: relative;
+        
+      &__div{
+        height: 100%;
+      }
+      &__header {
+        margin: 0;
+        padding: 2rem;
+        // margin-top: 10rem;
+      }
+ 
+      &__textbox {
+        background-color: $primary-bright;
+        color: $primary-light;
+        position: absolute;
+        left: 50%;
+        bottom: 40%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        
+      }
+      &__image {
+        // width: 100%;
+        height: 50vh;
+        object-fit: cover;
+        display: block;
+        object-position: center;
+        width: 100%;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // height: 100%;
+      }
+    }
+    &__info2{
+      
+      // display: flex;
+      // margin: 10rem;
+      &-img{
+        width:100%;
+        box-sizing: border-box;
+        height: 5rem;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        object-position: center;
+        
+      }
+    }
+  }
+  .footer{
     margin: 0;
-    // font-family: ;
-    // font-weight: ;
+    background-color: $primary-dark;
+    color: $primary-light;
+    &__address,
+    &__info-mail,
+    &__info-tel{
+      color: $primary-light;
+      text-decoration: none;
+    }
+
+  }
 }
 
-@include phone{
-    // .header{
+@include tablet {
+  // .header{
 
-    // }
-    // .main{
+  // }
+  // .main{
 
-    // }
-    // .footer{
+  // }
+  // .footer{
 
-    // }
+  // }
 }
 
-@include tablet{
-    // .header{
+@include desktop {
+  // .header{
 
-    // }
-    // .main{
+  // }
+  // .main{
 
-    // }
-    // .footer{
-        
-    // }
-}
+  // }
+  // .footer{
 
-@include desktop{
-    // .header{
-
-    // }
-    // .main{
-
-    // }
-    // .footer{
-        
-    // }
+  // }
 }

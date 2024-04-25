@@ -1,24 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./scripts/index-page.js" defer></script>
+    <link rel="stylesheet" href="./styles/index.css">
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <form class="header__form">
-            <input class="header__input">
-            <button class="header__button" type="submit">Ready ?</button>
-        </form>
-        <h1 class="header__h1"></h1>
+      <form class="header__form">
+        <div class="header__form-div">
+          <input class="header__input" placeholder="Enter a category"/>
+          <button class="header__button" type="submit">Ready?</button>
+        </div>
+      </form>
+      <!-- <h1 class="header__h1"></h1> -->
     </header>
     <main class="main">
+      <section class="main__hero hero">
+        <div class="hero__div"> </div>
+        <div class="hero__textbox"> </div>
+      </section>
+      <section class="main__info1">
+        <p class="main__info-p"></p>
+      </section>
+      <section class="main__slider">
+        <div class="main__slide-track">
+            <div class="main__slide">
+            </div>
+        </div>
+      </section>
+      <section class="main__info2">
+        <!-- <div class="main__info2-img"></div> -->
+        <div class="main_info-text">
+          <p class="main__info-p"></p>
+        </div>
+      </section>
     </main>
     <footer class="footer">
-        
+        <div class="footer__div">
+          <address class="footer__address"></address>
+          <a class="footer__info-mail" href="mailto:"></a>
+          <a class="footer__info-tel" href="tel:+"></a>
+        </div>
+        <div class="footer__div">
+          <a class="footer__icon">
+            <img class="footer__icon-tw">
+          </a>
+          <a class="footer__icon">
+            <img class="footer__icon-fb">
+          </a>
+          <a class="footer__icon">
+            <img class="footer__icon-ig">
+          </a>
+        </div>
     </footer>
-</body>
+  </body>
 </html>
